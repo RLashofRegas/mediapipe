@@ -21,7 +21,7 @@ node {
   node_options: {
     [type.googleapis.com/mediapipe.DetectionsToRenderDataCalculatorOptions] {
       thickness: 4.0
-      color { r: 0 g: 255 b: 0 }
+      color { r: 0 g: 0 b: 0 }
     }
   }
 }
@@ -34,7 +34,7 @@ node {
   node_options: {
     [type.googleapis.com/mediapipe.RectToRenderDataCalculatorOptions] {
       filled: false
-      color { r: 255 g: 0 b: 0 }
+      color { r: 0 g: 0 b: 0 }
       thickness: 4.0
     }
   }
@@ -48,7 +48,7 @@ node {
   node_options: {
     [type.googleapis.com/mediapipe.RectToRenderDataCalculatorOptions] {
       filled: false
-      color { r: 125 g: 0 b: 122 }
+      color { r: 0 g: 0 b: 0 }
       thickness: 4.0
     }
   }
@@ -135,10 +135,17 @@ node {
 # a vector of RenderData objects and draws each of them on the input frame.
 node {
   calculator: "AnnotationOverlayCalculator"
-  input_stream: "IMAGE:input_image"
   input_stream: "detection_render_data"
   input_stream: "multi_hand_rects_render_data"
   input_stream: "multi_palm_rects_render_data"
   input_stream: "VECTOR:0:multi_hand_landmarks_render_data"
   output_stream: "IMAGE:output_image"
+
+  node_options: {
+    [type.googleapis.com/mediapipe.AnnotationOverlayCalculatorOptions] {
+      canvas_color { r: 0 g: 0 b: 0 }
+      canvas_width_px: 848
+      canvas_height_px: 480
+    }
+  }
 }

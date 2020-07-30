@@ -32,7 +32,7 @@ constexpr char kNormLandmarksTag[] = "NORM_LANDMARKS";
 constexpr char kRenderScaleTag[] = "RENDER_SCALE";
 constexpr char kRenderDataTag[] = "RENDER_DATA";
 constexpr char kLandmarkLabel[] = "KEYPOINT";
-constexpr int kMaxLandmarkThickness = 18;
+constexpr int kMaxLandmarkThickness = 5;
 
 using ::mediapipe::RenderAnnotation_Point;
 
