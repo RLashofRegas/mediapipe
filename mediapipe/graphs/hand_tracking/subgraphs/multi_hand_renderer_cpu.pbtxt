@@ -144,8 +144,8 @@ node {
   node_options: {
     [type.googleapis.com/mediapipe.AnnotationOverlayCalculatorOptions] {
       canvas_color { r: 0 g: 0 b: 0 }
-      canvas_width_px: 848
-      canvas_height_px: 480
+      canvas_width_px: 500
+      canvas_height_px: 500
     }
   }
 }
